@@ -6,10 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		C025CAD719072730003D12FB /* HwperMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HwperMain.xib; sourceTree = "<group>"; };
+		C025CAD819072750003D12FB /* HwperMainController.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = HwperMainController.py; sourceTree = "<group>"; };
+		C025CAD919072750003D12FB /* setup.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = setup.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		C025CAD0190726F9003D12FB = {
 			isa = PBXGroup;
 			children = (
+				C025CAD819072750003D12FB /* HwperMainController.py */,
+				C025CAD919072750003D12FB /* setup.py */,
+				C025CAD719072730003D12FB /* HwperMain.xib */,
 			);
 			sourceTree = "<group>";
 		};
