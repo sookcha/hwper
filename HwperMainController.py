@@ -54,9 +54,11 @@ class HwperMainController(NSWindowController):
       xslt = plat.get_xslt()
       rng = plat.get_relaxng()
       
-      hwp5file = Hwp5File("/Users/sookcha/Desktop/Airkorea.hwp")
+      hwp5file = Hwp5File(self.fileName)
       
-      ODTSingleDocumentConverter(xslt, rng).convert_to(hwp5file,"/Users/sookcha/Desktop/a.odt")
+      destName = self.fileName.replace(".hwp",".odt")
+      
+      ODTSingleDocumentConverter(xslt, rng).convert_to(hwp5file,destName)
 
     @objc.IBAction
     def fileSearch_(self, sender):
@@ -66,7 +68,7 @@ class HwperMainController(NSWindowController):
         panel.setCanChooseFiles_(True)
         if panel.runModal() == NSOKButton:
           self.label.setStringValue_(panel.filename())
-          fileName = panel.filename()
+          self.fileName = panel.filename()
         return
 
     def hwp5odt(hwp5file, base_dir):
