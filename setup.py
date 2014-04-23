@@ -9,7 +9,8 @@ from setuptools import setup
 
 APP = ['HwperMainController.py']
 DATA_FILES = ['HwperMain.xib']
-OPTIONS = {'argv_emulation': True}
+OPTIONS = {'argv_emulation': True,
+    'iconfile':'hwpericon.icns',}
 
 setup(
     app=APP,

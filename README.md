@@ -1,6 +1,21 @@
 # Hwper
 
-[pyhwp](https://github.com/mete0r/pyhwp)의 Cocoa 프론트엔드 프로젝트.
+Cocoa front-end of [pyhwp](https://github.com/mete0r/pyhwp).
+
+## Installation
+
+You need to install [lxml](http://lxml.de/) to run Hwper.
+
+
+1. Download and install Xcode [Command Line Tools](https://developer.apple.com/downloads/index.action).
+2. Install libxml2 by using [Homebrew](http://brew.sh).
+
+	`brew install libxml2`
+3. Install lxml from pip.
+
+	`sudo pip install lxml`
+
+You're done. Run Hwper.app as usual.
 
 ## LICENSE
 

@@ -49,10 +49,14 @@ class HwperMainController(NSWindowController):
 
     @objc.IBAction
     def toODT_(self, sender):
-    	
-         
       xslt = plat.get_xslt()
+      if xslt is None:
+          logger.error('no XSLT implementation is available.')
+          sys.exit(1)
+          
       rng = plat.get_relaxng()
+      if rng is None:
+          logger.warning('no RelaxNG implementation is available.')
       
       hwp5file = Hwp5File(self.fileName)
       
@@ -70,9 +74,6 @@ class HwperMainController(NSWindowController):
           self.label.setStringValue_(panel.filename())
           self.fileName = panel.filename()
         return
-
-    def hwp5odt(hwp5file, base_dir):
-      """docstring for hwp5odt"""
 
 if __name__ == "__main__":
     app = NSApplication.sharedApplication()
